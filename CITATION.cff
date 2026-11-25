@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the paper below."
+title: "Adaptive Circuit Breaking and Load Shedding in Reactive Microservices Using JVM Runtime Telemetry — replication package"
+type: software
+authors:
+  - family-names: Joseph
+    given-names: Albin
+    orcid: "https://orcid.org/0009-0008-5086-6730"
+license: MIT
+keywords: [circuit breaker, load shedding, microservices, JVM telemetry]
+preferred-citation:
+  type: article
+  title: "Adaptive Circuit Breaking and Load Shedding in Reactive Microservices Using JVM Runtime Telemetry"
+  authors:
+    - family-names: Joseph
+      given-names: Albin
+      orcid: "https://orcid.org/0009-0008-5086-6730"
+  status: submitted

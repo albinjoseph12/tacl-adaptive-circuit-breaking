@@ -1,0 +1,349 @@
+{
+ "seed": 20260913,
+ "duration_s": 160,
+ "n": 30,
+ "jobs": [
+  {
+   "kind": "ablation",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "no-theta-adaptive",
+   "env": {
+    "ACB_THETA_ADAPTIVE": "false"
+   },
+   "out": "results/lock__no-theta-adaptive/adaptive/rep2",
+   "order": 0
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "hang",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/resilience4j/rep3",
+   "order": 1
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "spike",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/concurrency-limits/rep2",
+   "order": 2
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/resilience4j/rep3",
+   "order": 3
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "hang",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/concurrency-limits/rep1",
+   "order": 4
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "spike",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/concurrency-limits/rep1",
+   "order": 5
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "hang",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/concurrency-limits/rep2",
+   "order": 6
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/concurrency-limits/rep1",
+   "order": 7
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "spike",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/resilience4j/rep3",
+   "order": 8
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "spike",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/concurrency-limits/rep3",
+   "order": 9
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/resilience4j/rep3",
+   "order": 10
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "hang",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/resilience4j/rep1",
+   "order": 11
+  },
+  {
+   "kind": "ablation",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "no-limit-adaptive",
+   "env": {
+    "ACB_LIMIT_ADAPTIVE": "false"
+   },
+   "out": "results/lock__no-limit-adaptive/adaptive/rep2",
+   "order": 12
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/resilience4j/rep1",
+   "order": 13
+  },
+  {
+   "kind": "ablation",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "no-theta-adaptive",
+   "env": {
+    "ACB_THETA_ADAPTIVE": "false"
+   },
+   "out": "results/lock__no-theta-adaptive/adaptive/rep1",
+   "order": 14
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/concurrency-limits/rep3",
+   "order": 15
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/concurrency-limits/rep2",
+   "order": 16
+  },
+  {
+   "kind": "ablation",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "no-limit-adaptive",
+   "env": {
+    "ACB_LIMIT_ADAPTIVE": "false"
+   },
+   "out": "results/lock__no-limit-adaptive/adaptive/rep1",
+   "order": 17
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "hang",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/concurrency-limits/rep3",
+   "order": 18
+  },
+  {
+   "kind": "ablation",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "no-route-aware",
+   "env": {
+    "ACB_ROUTE_AWARE": "false"
+   },
+   "out": "results/lock__no-route-aware/adaptive/rep1",
+   "order": 19
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/resilience4j/rep2",
+   "order": 20
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/concurrency-limits/rep2",
+   "order": 21
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "spike",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/resilience4j/rep2",
+   "order": 22
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "spike",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/resilience4j/rep1",
+   "order": 23
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/concurrency-limits/rep3",
+   "order": 24
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/resilience4j/rep2",
+   "order": 25
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/resilience4j/rep1",
+   "order": 26
+  },
+  {
+   "kind": "ablation",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "no-route-aware",
+   "env": {
+    "ACB_ROUTE_AWARE": "false"
+   },
+   "out": "results/lock__no-route-aware/adaptive/rep2",
+   "order": 27
+  },
+  {
+   "kind": "chain",
+   "policy": "resilience4j",
+   "scenario": "hang",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/resilience4j/rep2",
+   "order": 28
+  },
+  {
+   "kind": "chain",
+   "policy": "concurrency-limits",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/concurrency-limits/rep1",
+   "order": 29
+  }
+ ]
+}

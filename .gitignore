@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+results/
+results_*/
+*.log
+*.tar.gz
+node_modules/

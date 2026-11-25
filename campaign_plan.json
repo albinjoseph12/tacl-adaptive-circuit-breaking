@@ -1,0 +1,1235 @@
+{
+ "seed": 20260907,
+ "duration_s": 160,
+ "n": 108,
+ "jobs": [
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "theta2030",
+   "env": {
+    "ACB_THETA_BASE": "20",
+    "ACB_THETA_SPAN": "30"
+   },
+   "out": "results/lock__theta2030/adaptive/rep2",
+   "order": 0
+  },
+  {
+   "kind": "split",
+   "policy": "gradient",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/gradient/rep2",
+   "order": 1
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/static-aggr/rep3",
+   "order": 2
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "hang",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/static-aggr/rep1",
+   "order": 3
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "ai8",
+   "env": {
+    "ACB_AI": "8"
+   },
+   "out": "results/lock__ai8/adaptive/rep2",
+   "order": 4
+  },
+  {
+   "kind": "split",
+   "policy": "gradient",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/gradient/rep1",
+   "order": 5
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "plow040",
+   "env": {
+    "ACB_P_LOW": "0.40"
+   },
+   "out": "results/lock__plow040/adaptive/rep1",
+   "order": 6
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "spike",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/adaptive/rep1",
+   "order": 7
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "beta07",
+   "env": {
+    "ACB_BETA": "0.7"
+   },
+   "out": "results/lock__beta07/adaptive/rep2",
+   "order": 8
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/gradient/rep1",
+   "order": 9
+  },
+  {
+   "kind": "split",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/adaptive/rep1",
+   "order": 10
+  },
+  {
+   "kind": "split",
+   "policy": "none",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/none/rep1",
+   "order": 11
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "spike",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/static/rep3",
+   "order": 12
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "theta4555",
+   "env": {
+    "ACB_THETA_BASE": "45",
+    "ACB_THETA_SPAN": "55"
+   },
+   "out": "results/lock__theta4555/adaptive/rep1",
+   "order": 13
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/none/rep3",
+   "order": 14
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "spike",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/static-aggr/rep2",
+   "order": 15
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "theta2030",
+   "env": {
+    "ACB_THETA_BASE": "20",
+    "ACB_THETA_SPAN": "30"
+   },
+   "out": "results/lock__theta2030/adaptive/rep1",
+   "order": 16
+  },
+  {
+   "kind": "split",
+   "policy": "none",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/none/rep2",
+   "order": 17
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "phigh070",
+   "env": {
+    "ACB_P_HIGH": "0.70"
+   },
+   "out": "results/lock__phigh070/adaptive/rep2",
+   "order": 18
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "hang",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/static-aggr/rep3",
+   "order": 19
+  },
+  {
+   "kind": "split",
+   "policy": "adaptive",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/adaptive/rep3",
+   "order": 20
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "hang",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/adaptive/rep2",
+   "order": 21
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "spike",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/static-aggr/rep3",
+   "order": 22
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "hang",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/none/rep1",
+   "order": 23
+  },
+  {
+   "kind": "split",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/adaptive/rep2",
+   "order": 24
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "hang",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/adaptive/rep1",
+   "order": 25
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "ai8",
+   "env": {
+    "ACB_AI": "8"
+   },
+   "out": "results/lock__ai8/adaptive/rep1",
+   "order": 26
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/none/rep2",
+   "order": 27
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "plow040",
+   "env": {
+    "ACB_P_LOW": "0.40"
+   },
+   "out": "results/lock__plow040/adaptive/rep2",
+   "order": 28
+  },
+  {
+   "kind": "split",
+   "policy": "gradient",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/gradient/rep1",
+   "order": 29
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "spike",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/gradient/rep1",
+   "order": 30
+  },
+  {
+   "kind": "split",
+   "policy": "static-aggr",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/static-aggr/rep3",
+   "order": 31
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/gradient/rep2",
+   "order": 32
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "hang",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/gradient/rep2",
+   "order": 33
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/static/rep2",
+   "order": 34
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "beta03",
+   "env": {
+    "ACB_BETA": "0.3"
+   },
+   "out": "results/lock__beta03/adaptive/rep1",
+   "order": 35
+  },
+  {
+   "kind": "split",
+   "policy": "static-aggr",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/static-aggr/rep3",
+   "order": 36
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "hang",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/adaptive/rep3",
+   "order": 37
+  },
+  {
+   "kind": "split",
+   "policy": "none",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/none/rep3",
+   "order": 38
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "spike",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/gradient/rep2",
+   "order": 39
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "ai2",
+   "env": {
+    "ACB_AI": "2"
+   },
+   "out": "results/lock__ai2/adaptive/rep2",
+   "order": 40
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "hang",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/none/rep2",
+   "order": 41
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/static-aggr/rep3",
+   "order": 42
+  },
+  {
+   "kind": "split",
+   "policy": "static-aggr",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/static-aggr/rep2",
+   "order": 43
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "hang",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/gradient/rep1",
+   "order": 44
+  },
+  {
+   "kind": "split",
+   "policy": "static",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/static/rep3",
+   "order": 45
+  },
+  {
+   "kind": "split",
+   "policy": "static",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/static/rep2",
+   "order": 46
+  },
+  {
+   "kind": "split",
+   "policy": "adaptive",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/adaptive/rep2",
+   "order": 47
+  },
+  {
+   "kind": "split",
+   "policy": "static",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/static/rep1",
+   "order": 48
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "spike",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/static/rep2",
+   "order": 49
+  },
+  {
+   "kind": "split",
+   "policy": "static",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/static/rep3",
+   "order": 50
+  },
+  {
+   "kind": "split",
+   "policy": "static-aggr",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/static-aggr/rep2",
+   "order": 51
+  },
+  {
+   "kind": "split",
+   "policy": "static-aggr",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/static-aggr/rep1",
+   "order": 52
+  },
+  {
+   "kind": "split",
+   "policy": "none",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/none/rep1",
+   "order": 53
+  },
+  {
+   "kind": "split",
+   "policy": "gradient",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/gradient/rep3",
+   "order": 54
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "phigh070",
+   "env": {
+    "ACB_P_HIGH": "0.70"
+   },
+   "out": "results/lock__phigh070/adaptive/rep1",
+   "order": 55
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/gradient/rep2",
+   "order": 56
+  },
+  {
+   "kind": "split",
+   "policy": "none",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/none/rep2",
+   "order": 57
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "hang",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/static/rep2",
+   "order": 58
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "phigh090",
+   "env": {
+    "ACB_P_HIGH": "0.90"
+   },
+   "out": "results/lock__phigh090/adaptive/rep1",
+   "order": 59
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/static/rep1",
+   "order": 60
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/static-aggr/rep1",
+   "order": 61
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/none/rep3",
+   "order": 62
+  },
+  {
+   "kind": "split",
+   "policy": "none",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/none/rep3",
+   "order": 63
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/static/rep3",
+   "order": 64
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "spike",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/gradient/rep3",
+   "order": 65
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "theta4555",
+   "env": {
+    "ACB_THETA_BASE": "45",
+    "ACB_THETA_SPAN": "55"
+   },
+   "out": "results/lock__theta4555/adaptive/rep2",
+   "order": 66
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/static/rep3",
+   "order": 67
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "spike",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/adaptive/rep2",
+   "order": 68
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/adaptive/rep1",
+   "order": 69
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/adaptive/rep1",
+   "order": 70
+  },
+  {
+   "kind": "split",
+   "policy": "gradient",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/gradient/rep3",
+   "order": 71
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/gradient/rep3",
+   "order": 72
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "spike",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/static/rep1",
+   "order": 73
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/static/rep1",
+   "order": 74
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/adaptive/rep3",
+   "order": 75
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "hang",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/static/rep1",
+   "order": 76
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "hang",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/static/rep3",
+   "order": 77
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/adaptive/rep2",
+   "order": 78
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/static-aggr/rep2",
+   "order": 79
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/none/rep1",
+   "order": 80
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "beta03",
+   "env": {
+    "ACB_BETA": "0.3"
+   },
+   "out": "results/lock__beta03/adaptive/rep2",
+   "order": 81
+  },
+  {
+   "kind": "split",
+   "policy": "gradient",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/gradient/rep2",
+   "order": 82
+  },
+  {
+   "kind": "chain",
+   "policy": "static",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/static/rep2",
+   "order": 83
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "ai2",
+   "env": {
+    "ACB_AI": "2"
+   },
+   "out": "results/lock__ai2/adaptive/rep1",
+   "order": 84
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/static-aggr/rep2",
+   "order": 85
+  },
+  {
+   "kind": "split",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 3,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/adaptive/rep3",
+   "order": 86
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "spike",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/none/rep1",
+   "order": 87
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/lock/none/rep2",
+   "order": 88
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "hang",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/none/rep3",
+   "order": 89
+  },
+  {
+   "kind": "split",
+   "policy": "adaptive",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/adaptive/rep1",
+   "order": 90
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "spike",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/static-aggr/rep1",
+   "order": 91
+  },
+  {
+   "kind": "split",
+   "policy": "static-aggr",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/static-aggr/rep1",
+   "order": 92
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "spike",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/adaptive/rep3",
+   "order": 93
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/static-aggr/rep1",
+   "order": 94
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/adaptive/rep3",
+   "order": 95
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/none/rep1",
+   "order": 96
+  },
+  {
+   "kind": "split",
+   "policy": "static",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/gc-split/static/rep2",
+   "order": 97
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "spike",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/none/rep3",
+   "order": 98
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "hang",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/gradient/rep3",
+   "order": 99
+  },
+  {
+   "kind": "chain",
+   "policy": "none",
+   "scenario": "spike",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/spike/none/rep2",
+   "order": 100
+  },
+  {
+   "kind": "split",
+   "policy": "static",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "split",
+   "tag": "",
+   "env": {},
+   "out": "results/lock-split/static/rep1",
+   "order": 101
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "phigh090",
+   "env": {
+    "ACB_P_HIGH": "0.90"
+   },
+   "out": "results/lock__phigh090/adaptive/rep2",
+   "order": 102
+  },
+  {
+   "kind": "sens",
+   "policy": "adaptive",
+   "scenario": "lock",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "beta07",
+   "env": {
+    "ACB_BETA": "0.7"
+   },
+   "out": "results/lock__beta07/adaptive/rep1",
+   "order": 103
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "gc",
+   "rep": 3,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/gradient/rep3",
+   "order": 104
+  },
+  {
+   "kind": "chain",
+   "policy": "static-aggr",
+   "scenario": "hang",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/hang/static-aggr/rep2",
+   "order": 105
+  },
+  {
+   "kind": "chain",
+   "policy": "gradient",
+   "scenario": "gc",
+   "rep": 1,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/gradient/rep1",
+   "order": 106
+  },
+  {
+   "kind": "chain",
+   "policy": "adaptive",
+   "scenario": "gc",
+   "rep": 2,
+   "topology": "chain",
+   "tag": "",
+   "env": {},
+   "out": "results/gc/adaptive/rep2",
+   "order": 107
+  }
+ ]
+}

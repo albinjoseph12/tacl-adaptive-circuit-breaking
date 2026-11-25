@@ -1,0 +1,105 @@
+# Reproducible testbed for "Adaptive Circuit Breaking and Load Shedding in Reactive Microservices
+# Using JVM Runtime Telemetry".
+#
+#   docker compose up -d postgres            # start the database
+#   docker compose run --rm seed              # 2,000,000-row synthetic orders table
+#   ACB_POLICY=adaptive docker compose up -d catalog gateway
+#   docker compose run --rm -e ACB_SCENARIO=spike locust
+#   docker compose run --rm telemetry         # 100 ms telemetry logger -> ./results/telemetry.csv
+#
+# or simply:  ./run_experiment.sh <policy> <scenario> <rep>   (native mode, used for the paper's measurements)
+#
+# CPU layout mirrors the paper's native runs: the downstream tier (postgres + catalog) is pinned to one vCPU and the
+# client tier (gateway, locust, telemetry) to another, so that load-generator CPU never masks downstream saturation.
+services:
+  postgres:
+    image: postgres:16
+    container_name: acb-postgres
+    environment:
+      POSTGRES_USER: acb
+      POSTGRES_PASSWORD: acb
+      POSTGRES_DB: acb
+    command: >
+      postgres -c max_connections=200 -c shared_buffers=1GB -c work_mem=8MB -c effective_cache_size=3GB
+               -c synchronous_commit=off -c max_wal_size=2GB -c track_activity_query_size=2048
+    ports: ["5432:5432"]
+    cpuset: "1"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U acb -d acb"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  seed:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes: ["./seed:/app"]
+    environment:
+      ACB_DSN: "dbname=acb user=acb password=acb host=postgres port=5432"
+    command: sh -c "pip install -q psycopg2-binary && python seed_db.py --rows 2000000"
+    depends_on:
+      postgres: { condition: service_healthy }
+
+  catalog:
+    build: { context: ./services, dockerfile: Dockerfile.catalog }
+    container_name: acb-catalog
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/acb
+      DB_USER: acb
+      DB_PASSWORD: acb
+      CATALOG_PORT: "8081"
+      CATALOG_MGMT_PORT: "8091"
+      TOMCAT_MAX_THREADS: "48"
+      HIKARI_MAX_POOL: "16"
+      HIKARI_CONN_TIMEOUT_MS: "2000"
+      JAVA_TOOL_OPTIONS: "-Xms256m -Xmx256m -XX:+UseG1GC -XX:MaxGCPauseMillis=50"
+    ports: ["8081:8081", "8091:8091"]
+    cpuset: "1"
+    depends_on:
+      postgres: { condition: service_healthy }
+
+  gateway:
+    build: { context: ./services, dockerfile: Dockerfile.gateway }
+    container_name: acb-gateway
+    environment:
+      ACB_POLICY: ${ACB_POLICY:-adaptive}       # none | static | gradient | adaptive
+      DOWNSTREAM_URL: http://catalog:8081
+      TELEMETRY_URL: http://catalog:8091
+      GATEWAY_PORT: "8080"
+      CALL_TIMEOUT_MS: "3000"
+      CB_FAILURE_RATE: ${CB_FAILURE_RATE:-50}
+      CB_SLOW_RATE: ${CB_SLOW_RATE:-50}
+      CB_SLOW_MS: ${CB_SLOW_MS:-1000}
+      CB_WAIT_OPEN_MS: ${CB_WAIT_OPEN_MS:-10000}
+      JAVA_TOOL_OPTIONS: "-Xms256m -Xmx256m -XX:+UseG1GC"
+    ports: ["8080:8080"]
+    cpuset: "0"
+    depends_on: [catalog]
+
+  locust:
+    image: locustio/locust:2.32.4
+    working_dir: /mnt/locust
+    volumes: ["./load:/mnt/locust", "./results:/mnt/results"]
+    environment:
+      ACB_SCENARIO: ${ACB_SCENARIO:-spike}
+      ACB_USERS: "500"
+      ACB_DURATION: "180"
+      ACB_REQ_LOG: /mnt/results/requests.csv
+    command: -f locustfile.py --headless -H http://gateway:8080 --csv /mnt/results/locust --only-summary
+    cpuset: "0"
+    depends_on: [gateway]
+
+  telemetry:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes: ["./telemetry:/app", "./results:/mnt/results"]
+    environment:
+      ACB_DSN: "dbname=acb user=acb password=acb host=postgres port=5432"
+    command: sh -c "pip install -q psycopg2-binary && python poll_telemetry.py --downstream http://catalog:8091 --gateway http://gateway:8080 --duration 185 --out /mnt/results/telemetry.csv"
+    cpuset: "0"
+    depends_on: [gateway]
+
+volumes:
+  pgdata: {}
