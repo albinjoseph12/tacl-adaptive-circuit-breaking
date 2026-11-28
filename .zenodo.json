@@ -1,0 +1,22 @@
+{
+  "title": "Adaptive Circuit Breaking and Load Shedding in Reactive Microservices Using JVM Runtime Telemetry \u2014 Replication Package",
+  "description": "Replication package for TACL: reactive Netty gateway, Tomcat/HikariCP downstream service, 2M-row PostgreSQL workload, 138 closed-loop and 304 open-loop runs, plus extended 45-run 4-shard validation (n=5 bounded bootstrap CIs, offered-rate load sweep, and 2-replica round-robin fleet with max/mean telemetry aggregation).",
+  "upload_type": "software",
+  "version": "1.0.1",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Joseph, Albin",
+      "affiliation": "Independent Researcher, Fremont, California, USA",
+      "orcid": "0009-0008-5086-6730"
+    }
+  ],
+  "keywords": [
+    "circuit breaker",
+    "load shedding",
+    "microservices",
+    "JVM telemetry",
+    "overload control"
+  ],
+  "access_right": "open"
+}
